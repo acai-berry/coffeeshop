@@ -20,6 +20,7 @@ class Review(models.Model):
     coffee = models.ForeignKey(Coffee, on_delete=models.CASCADE, related_name='reviews')
     review = models.CharField(max_length=140)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
+    rating = models.IntegerField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
